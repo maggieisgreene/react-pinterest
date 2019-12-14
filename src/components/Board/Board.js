@@ -22,7 +22,7 @@ class Board extends React.Component {
     const { board } = this.props;
 
     return (
-      <div className="Board col-3">
+      <div className="Board col-4">
         <div className="card">
         <img src={board.previewImageUrl} className="card-img-top boardImg" alt={board.name} />
           <div className="card-body">

@@ -6,6 +6,8 @@ import Pin from '../Pin/Pin';
 import boardData from '../../helpers/data/boardData';
 import pinData from '../../helpers/data/pinData';
 
+import './SingleBoard.scss';
+
 class SingleBoard extends React.Component {
   static propTypes = {
     selectedBoardId: PropTypes.string,
@@ -43,10 +45,11 @@ class SingleBoard extends React.Component {
 
     return (
       <div>
-        <button className="btn btn-info" onClick={this.removeSelectedBoardId}>x Close Board View</button>
-        <div className="SingleBoard col-8 offset-2">
-          <h2>{board.name}</h2>
-          <p>{board.description}</p>
+        <div className="SingleBoard">
+          <div className="singleBoardHeader d-flex justify-content-between">
+            <h3>{board.name}</h3>
+            <button className="btn btn-light" onClick={this.removeSelectedBoardId}>Go Back</button>
+          </div>
           <div className="d-flex flex-wrap">
             {pinCard}
           </div>
