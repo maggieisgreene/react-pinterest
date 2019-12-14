@@ -4,6 +4,7 @@ import 'firebase/auth';
 
 import firebaseConnection from '../helpers/data/connection';
 import Auth from '../components/Auth/Auth';
+import MyNavbar from '../components/MyNavbar/MyNavbar';
 
 import './App.scss';
 
@@ -33,6 +34,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
+        <MyNavbar authed={authed} />
         <button className="btn btn-danger">Bootstrap Button</button>
         {
         (authed) ? (<div>You logged in!</div>) : (<Auth />)
