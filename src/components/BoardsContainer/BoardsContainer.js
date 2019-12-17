@@ -43,7 +43,7 @@ class BoardsContainer extends React.Component {
 
     return (
       <div className="boards-container">
-        <BoardForm addBoard={ this.addBoard } />
+        <BoardForm addBoard={this.addBoard} />
         {this.state.boards.map((board) => <Board key={board.id} board={board} setSingleBoard={setSingleBoard} />)}
       </div>
     );
